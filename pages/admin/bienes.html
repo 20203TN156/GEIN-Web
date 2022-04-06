@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="../../css/sideBar.css">
+    <link href="../../css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/styleComite.css">
+
+    <!-- favicoin link -->
+    <link rel="shortcut icon" href="${pageContext.request.contextPath}/img/favicoin.png" type="image/x-icon">
+    <!--Font awesome -->
+    <script src="https://kit.fontawesome.com/16c39358e7.js" crossorigin="anonymous"></script>
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body id="grad">
+    <div class="sidebar">
+        <div class="logo-details">
+            <a class='icon' href="ServletDivisionAcademica"> <img class="favicoin" src="../../img/logo_1.svg" alt=""></a>
+            <div class="logo_name">GEIN</div>
+            <i class='bx bx-menu' id="btn" ></i>
+        </div>
+        <ul class="nav-list">
+            <li>
+                <a href="../admin/solicitudes.html">
+                    <i><img class="iconosNav" src="../../img/calendar.svg" alt=""></i>
+                    <span class="links_name">Solicitudes</span>
+                </a>
+            </li>
+            <li>
+                <a href="../admin/gestion.html" >
+                    <i><img class="iconosNav" src="../../img/cog.svg" alt=""></i>
+                    <span class="links_name">Gestión</span>
+                </a>
+            </li>
+            <li class="profile">
+                <div class="profile-details">
+                </div>
+                <a href="../../index.html">
+                    <i class='bx bx-log-out' id="log_out" ></i>
+                </a>
+            </li>
+            <br>
+        </ul>
+    </div>
+
+    
+    <div class="container-fluid">
+        <br>
+          <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">...</div>
+            <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
+            <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
+          </div>
+
+        <section>
+            <div>
+                <div class="row d-flex justify-content-center">
+                    <div class="col-md-9 col-lg-6 col-xl-5">
+                        <p style="color: white; font-family: Poppins;" class="font-size-title-lg">Bienes</p>
+                        <p style="color: white; font-family: Poppins;">Gestión</p>
+                        <img src="../../img/Component 1.svg" class="img-fluid" alt="Sample image">
+                    </div>
+                    <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1" id="">
+                        
+                        
+                        <button type="button" class="btn btn-link" data-toggle="modal" data-target="#contenedor-modal"
+                        data-backdrop="false"><h5 style="color: #85E0CB;">AGREGAR</h5></button>
+
+                        <div class="col-md-3">
+                            <!-- Modal Agregar una nueva cuenta del comite -->
+                            <div class="modal fade " tabindex="-1" role="dialog" id="contenedor-modal"
+                                 aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content border-radius: 15px">
+                                        <div class="modal-header" style="background-color:#09233E;">
+                                            <h5 class="modal-title align-items-center" id="exampleModalLabel" style="color: white;">Agregar docencia</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close " style="color: white;">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body" style="background-color:#09233E;">
+                                            <form action="ServletCuentaComite" method="post">
+                                                <div class=" ">
+                                                    <div class="form-group ">
+                                                        <input class="form-control" type="text" name="nombre" id="nombre"
+                                                               placeholder="Edificio 1" style="background-color: #152E48; border: 0;">
+                                                    </div>
+                                                    <div class="form-group ">
+                                                        <input class="form-control" type="text" name="primerApellido"
+                                                               id="primerApellido"
+                                                               placeholder="Nombre" style="background-color: #152E48; border: 0;">
+                                                    </div>
+                                                    <div class="form-group ">
+                                                        <input class="form-control" type="text" name="nombre" id="nombre"
+                                                               placeholder="Acrónimo" style="background-color: #152E48; border: 0;">
+                                                    </div>
+                                                    <div class="form-group ">
+                                                        <input class="form-control" type="text" name="primerApellido"
+                                                               id="primerApellido"
+                                                               placeholder="Capacidad" style="background-color: #152E48; border: 0;">
+                                                    </div>
+                                                    
+                                                    <div class="form-group float-left align-items-center">
+                                                        <button type="reset" class="btn btn-link mr-3" style="color: #F7726E;">LIMPIAR</button>
+                                                        <button type="submit" class="btn btn-link" style="color: #85E0CB;">AGREGAR</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <button type="submit"
+                                                    href="${pageContext.request.contextPath}/ServletGo?to=administrador/cuentaComiteUD.jsp"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <!-- Modal Agregar una nueva cuenta del comite -->
+                            <div class="modal fade " tabindex="-1" role="dialog" id="contenedor-modal1"
+                                 aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content border-radius: 15px">
+                                        <div class="modal-header" style="background-color:#09233E;">
+                                            <h5 class="modal-title align-items-center" id="exampleModalLabel" style="color: white;">Editar edificio</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close " style="color: white;">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body" style="background-color:#09233E;">
+                                            <form action="ServletCuentaComite" method="post">
+                                                <div class=" ">
+                                                    <div class="form-group ">
+                                                        <input class="form-control" type="text" name="nombre" id="nombre"
+                                                               placeholder="Edificio 1">
+                                                    </div>
+                                                    <div class="form-group ">
+                                                        <input class="form-control" type="text" name="primerApellido"
+                                                               id="primerApellido"
+                                                               placeholder="Nombre">
+                                                    </div>
+                                                    <div class="form-group ">
+                                                        <input class="form-control" type="text" name="nombre" id="nombre"
+                                                               placeholder="Acrónimo">
+                                                    </div>
+                                                    <div class="form-group ">
+                                                        <input class="form-control" type="number" name="primerApellido"
+                                                               id="primerApellido"
+                                                               placeholder="Capacidad">
+                                                    </div>
+                                                    
+                                                    <div class="form-group float-left align-items-center">
+                                                        <button type="reset" class="btn btn-link mr-3" style="color: #F7726E;">LIMPIAR</button>
+                                                        <button type="submit" class="btn btn-link" style="color: #85E0CB;">GUARDAR</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                            <button type="submit"
+                                                    href="${pageContext.request.contextPath}/ServletGo?to=administrador/cuentaComiteUD.jsp"></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <!-- Modal Agregar una nueva cuenta del comite -->
+                            <div class="modal fade " tabindex="-1" role="dialog" id="contenedor-modal2"
+                                 aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content border-radius: 15px">
+                                        <div class="modal-header" style="background-color:#09233E;">
+                                            <h5 class="modal-title align-items-center" id="exampleModalLabel" style="color: white;">Confirmación</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close " style="color: white;">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body" style="background-color:#09233E;">
+                                            <form action="ServletCuentaComite" method="post">
+                                                <div class=" ">
+                                                    <div class="form-group ">
+                                                        <h5 style="color: white;">¿Seguro que deseas eliminar este elemento? No se podrá deshacer esta acción </h5>
+                                                    </div>
+                                                    
+                                                    
+                                                    <div class="form-group float-left align-items-center">
+                                                        <button type="reset" class="btn btn-link mr-3" style="color: #F7726E;">CANCELAR</button>
+                                                        <button type="submit" class="btn btn-link" style="color: #85E0CB;">ELIMINAR</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+
+                        <div class="card mb-3 color-card " style="max-width: 540px; border-radius: 15px" >
+                            <div class="row g-0 card-body">
+                                <div class="col-md-4">
+                                    <div class="d-flex align-items-center">
+                                        <div class="box">
+                                            <img style="margin-top: 25px" src="../../img/Group 8.svg" class="img-fluid rounded-start" alt="...">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-8 ">
+                                    <div class="align-items-center">
+                                        <p></p>
+                                        <h5 class="card-title " style="color: white;">&nbsp;&nbsp;Auditorio 1</h5>
+                                        <h6 class="card-title " style="color: white;">&nbsp; &nbsp;A1</h6>
+                                        <br>
+                                            <div class="row">
+                                                <div class="col-md-5">
+                                                    <button type="button" class="btn btn-link" data-toggle="modal" data-target="#contenedor-modal1"
+                                                    data-backdrop="false"><h5 style="color: #85E0CB;">EDITAR</h5></button>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <button type="button" class="btn btn-link" data-toggle="modal" data-target="#contenedor-modal2"
+                                                    data-backdrop="false"><h5 style="color: #F7726E;">ELIMINAR</h5></button>
+                                                </div>  
+                                            </div>   
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card mb-3 color-card " style="max-width: 540px; border-radius: 15px" >
+                            <div class="row g-0 card-body">
+                                <div class="col-md-4">
+                                    <div class="d-flex align-items-center">
+                                        <div class="box">
+                                            <img style="margin-top: 25px" src="../../img/Group 8.svg" class="img-fluid rounded-start" alt="...">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-8 ">
+                                    <div class="align-items-center">
+                                        <p></p>
+                                        <h5 class="card-title " style="color: white;">&nbsp;&nbsp;Auditorio 2</h5>
+                                        <h6 class="card-title " style="color: white;">&nbsp; &nbsp;A2</h6>
+                                        <br>
+                                            <div class="row">
+                                                <div class="col-md-5">
+                                                    <h5 style="color: #85E0CB;">&nbsp;  EDITAR</h5>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <h5 style="color: #F7726E;">&nbsp;  ELIMINAR</h5>
+                                                </div>  
+                                            </div>   
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card mb-3 color-card " style="max-width: 540px; border-radius: 15px" >
+                            <div class="row g-0 card-body">
+                                <div class="col-md-4">
+                                    <div class="d-flex align-items-center">
+                                        <div class="box">
+                                            <img style="margin-top: 25px" src="../../img/Group 8.svg" class="img-fluid rounded-start" alt="...">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-8 ">
+                                    <div class="align-items-center">
+                                        <p></p>
+                                        <h5 class="card-title " style="color: white;">&nbsp;&nbsp;Auditorio 1</h5>
+                                        <h6 class="card-title " style="color: white;">&nbsp; &nbsp;A3</h6>
+                                        <br>
+                                            <div class="row">
+                                                <div class="col-md-5">
+                                                    <h5 style="color: #85E0CB;">&nbsp;  EDITAR</h5>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <h5 style="color: #F7726E;">&nbsp;  ELIMINAR</h5>
+                                                </div>  
+                                            </div>   
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </div>
+</body>
+
+<script src="../../js/sideBar.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+
+
+</html>
